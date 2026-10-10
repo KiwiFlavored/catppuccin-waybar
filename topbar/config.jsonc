@@ -73,11 +73,12 @@
 
 	/* ------ Battery ------ */
 	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 25,
-			"critical": 15
-		},
+  	"states": {
+  	  "full": 100,
+  		"good": 95,
+  		"warning": 25,
+  		"critical": 10
+  	},
 		"format": "{icon} {capacity}%",
 		"format-charging": "{icon} {capacity}%",
 		"format-discharging": "{icon} {capacity}%",
