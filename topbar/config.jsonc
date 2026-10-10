@@ -84,6 +84,10 @@
 		"format-discharging-critical": "󱃍 {capacity}%",
 		"format-plugged": "󰚥 {capacity}%",
 		"min-length": 6,
+		"format-time": "{H}h {m}m",
+		"tooltip-format-charging": "󱧥 {time}\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-discharging": "󱧦 {time}\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-plugged": "󱐋 {power}W\n󱟢 {capacity}%\n󱈑 {health}%\n󱠴 {cycles}",
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
