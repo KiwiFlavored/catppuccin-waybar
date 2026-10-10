@@ -1,5 +1,5 @@
 /* --- Catppuccin Macchiato Colors --- */
-@import catppuccin-macchiato.css;
+@import "catppuccin-macchiato.css";
 
 /* --- Mostly for fonts nothing special --- */
 * {
