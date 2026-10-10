@@ -16,7 +16,7 @@
 	/* ------ Modules ------ */
   "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["clock"],
-  "modules-right": ["backlight","pulseaudio","network","battery"],
+  "modules-right": ["backlight","group/pulseaudio","network","battery"],
 
 	/* ------ Defining Modules ------ */
 	/* ------ Hyprland Workspaces ------ */
@@ -48,18 +48,46 @@
 	},
 
 	/* ------ Volume ------ */
-	"pulseaudio": {
-		"tooltip": false,
-		"format": "{icon} {volume}%",
-		"format-muted": " Muted",
-		"on-click": "pamixer -t",
-		"on-scroll-up": "pamixer -i 5",
-		"on-scroll-down": "pamixer -d 5",
-		"scroll-step": 5,
-		"format-icons": {
-			"headphone": "",
-			"default": ["", "", ""]
+	"group/pulseaudio": {
+	  "modules": [
+			"pulseaudio#output",
+			"pulseaudio#input"
+			],
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-left-to-right": false
 		}
+	},
+	"pulseaudio#input": {
+	  "format": "{format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 {volume}%",
+    "tooltip-format": "{source_desc}",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "target": "source"
+	},
+	"pulseaudio#output": {
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"tooltip-format": "{desc}",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"format-icons": {
+		  "default": ["󰕿", "󰖀", "󰕾"],
+			"default-muted": "󰝟",
+			"car": "󰄋",
+			"car-muted": "󰸜",
+			"hdmi": "󰐯",
+			"hdmi-muted": "󱠍",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐",
+			"phone": "󰄜",
+			"phone-muted": "󰥐",
+			"speaker": "󰓃",
+			"speaker-muted": "󰓄",
+		},
+		"target": "sink"
 	},
 
 	/* ------ Network ------ */
