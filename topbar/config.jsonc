@@ -92,6 +92,11 @@
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+		},
+    "events": {
+      "on-discharging-warning": "notify-send -u normal -i battery-low 'Battery Low' '{capacity}%' ",
+      "on-discharging-critical": "notify-send -u urgent -i battery-caution 'Battery Critical' '{capacity}%'",
+      "on-charging-full":"notify-send -u low -i battery-full 'Battery Full '{capacity}%'"
     }
 	},
 
