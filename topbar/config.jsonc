@@ -77,7 +77,8 @@
 
 	/* ------ Clock ------ */
 	"clock": {
-		"format": " {:%I:%M %p}",
+	  "interval": 1,
+	  "format": "󰃭 {0:%Y-%m-%d}  {0:%H:%M:%S-%Z}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"mode": "month",
