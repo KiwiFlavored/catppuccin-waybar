@@ -11,7 +11,7 @@
 /* --- Waybar Styles --- */
 window#waybar {
   color: @text;
-  background: #1a1e23;
+  background: @base;
   border-radius: 0.5rem;
   /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
@@ -34,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #75aaf0;
+  color: @sapphire;
 }
 
 #workspaces button.urgent {
