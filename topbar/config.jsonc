@@ -39,7 +39,9 @@
 
 	/* ------ Brightness ------ */
 	"backlight": {
-		"format": "{icon} {percent}%",
+    "format": "{icon}",
+    "min-length": 2,
+    "tooltip-format": "{icon} {percent}%",
 		"format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞", "󰃟", "󰃠"],
 		"on-scroll-up": "brightnessctl set 1%+",
 		"on-scroll-down": "brightnessctl set 1%-"
