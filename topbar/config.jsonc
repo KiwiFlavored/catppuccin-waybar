@@ -79,9 +79,11 @@
 			"critical": 15
 		},
 		"format": "{icon} {capacity}%",
-		"format-charging": "󰂄 {capacity}%",
-		"format-plugged": " {capacity}%",
-		"format-alt": "{time} {icon}",
+		"format-charging": "{icon} {capacity}%",
+		"format-discharging": "{icon} {capacity}%",
+		"format-discharging-critical": "󱃍 {capacity}%",
+		"format-plugged": "󰚥 {capacity}%",
+		"min-length": 6,
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
