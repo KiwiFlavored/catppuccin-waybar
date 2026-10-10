@@ -40,7 +40,7 @@
 	/* ------ Brightness ------ */
 	"backlight": {
 		"format": "{icon} {percent}%",
-		"format-icons": ["󰃞", "󰃟", "󰃠"],
+		"format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞", "󰃟", "󰃠"],
 		"on-scroll-up": "brightnessctl set 1%+",
 		"on-scroll-down": "brightnessctl set 1%-"
 	},
