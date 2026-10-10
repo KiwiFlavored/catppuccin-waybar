@@ -14,7 +14,7 @@
 	"margin-bottom": 0,
 
 	/* ------ Modules ------ */
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["clock"],
   "modules-right": ["backlight","pulseaudio","network","battery"],
 
@@ -28,6 +28,14 @@
     },
     "disable-scroll": true
   },
+
+  /* ------ Tray ------ */
+	"tray": {
+		"icon-size": 16,
+		"spacing": 12,
+		"cursor": true,
+		"expand": false,
+	},
 
 	/* ------ Brightness ------ */
 	"backlight": {
