@@ -10,7 +10,7 @@
 
 /* --- Waybar Styles --- */
 window#waybar {
-  color: #cdd6f4;
+  color: @text;
   background: #1a1e23;
   border-radius: 0.5rem;
   /* border: 2px solid rgba(117, 170, 240, 0.5); */
@@ -24,7 +24,7 @@ window#waybar {
 /* For workspace button*/
 #workspaces button {
   /* Changing the padding will effect default padding */
-  color: #b4befe;
+  color: @lavender;
 }
 
 #workspaces button:hover {
@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  color: #a6e3a1;
+  color: @green;
 }
 
 #battery,
@@ -48,14 +48,14 @@ window#waybar {
 }
 
 #network {
-  color: #f9e2af;
+  color: @yellow;
 }
 
 #pulseaudio {
-  color: #89b4fa;
+  color: @sky;
 }
 
 #battery {
-  color: #a6e3a1;
+  color: @green;
   margin-right: 20px;
 }
