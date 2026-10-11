@@ -92,11 +92,14 @@
 
 	/* ------ Network ------ */
 	"network": {
-		"tooltip": false,
-		"format-alt": "{essid} {ipaddr}",
-		"format-wifi": "  {signalStrength}%",
-		"format-ethernet": "{ipaddr}/{cidr}",
-		"format-disconnected": "Disconnected ⚠",
+  	"format": "{icon} {essid}",
+    "format-alt": "{icon} 󰳘 {bandwidthUpBytes} 󰱦 {bandwidthDownBytes}",
+    "format-disabled": "{icon}",
+    "format-disconnected": "{icon}",
+    "format-ethernet": "{icon} {ifname}",
+    "format-linked": "{icon} {ifname}",
+    "format-wifi": "{icon} {essid}",
+    "min-length": 2,
 	},
 
 	/* ------ Battery ------ */
