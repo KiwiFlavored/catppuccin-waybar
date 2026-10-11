@@ -49,8 +49,13 @@ window#waybar {
 
 #battery,
 #network,
-#pulseaudio {
+#pulseaudio,
+#backlight {
   margin-left: 20px;
+}
+
+#idle_inhibitor {
+    color: @flamingo;
 }
 
 #pulseaudio {

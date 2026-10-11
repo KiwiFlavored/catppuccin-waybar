@@ -16,7 +16,7 @@
 	/* ------ Modules ------ */
   "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["custom/swaync", "clock#date", "clock#time"],
-  "modules-right": ["backlight","group/pulseaudio","network","battery"],
+  "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "network","battery"],
 
 	/* ------ Defining Modules ------ */
 	/* ------ Hyprland Workspaces ------ */
@@ -84,6 +84,18 @@
 		],
 		"tooltip-format":"{tz_list}",
 		"timezone-tooltip-format":"{0:%Z %H:%M %z}"
+	},
+
+	/* ------ Idle Inhibitor ------ */
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"min-length": 2,
+		"format-icons": {
+			"activated": "󰅶",
+			"deactivated": "󰛊"
+		},
+		"tooltip-format-activated": "<b>Idle Inhibitor</b>: Activated",
+		"tooltip-format-deactivated": "<b>Idle Inhibitor</b>: Deactivated"
 	},
 
 	/* ------ Brightness ------ */
