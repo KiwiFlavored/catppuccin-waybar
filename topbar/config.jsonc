@@ -138,9 +138,9 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 		},
     "events": {
-      "on-discharging-warning": "notify-send -u normal -i battery-low 'Battery Low' '{capacity}%' ",
-      "on-discharging-critical": "notify-send -u urgent -i battery-caution 'Battery Critical' '{capacity}%'",
-      "on-charging-full":"notify-send -u low -i battery-full 'Battery Full '{capacity}%'"
+      "on-discharging-warning": "notify-send -u normal -i battery-low 'Battery Low' 'Battery at 25%' ",
+      "on-discharging-critical": "notify-send -u urgent -i battery-caution 'Battery Critical' 'Battery at 10%'",
+      "on-charging-full":"notify-send -u low -i battery-full 'Battery Full 'Battery at 100%'"
     }
 	},
 
