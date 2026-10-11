@@ -15,7 +15,7 @@
 
 	/* ------ Modules ------ */
   "modules-left": ["hyprland/workspaces", "tray"],
-  "modules-center": ["clock#date", "clock#time"],
+  "modules-center": ["custom/swaync", "clock#date", "clock#time"],
   "modules-right": ["backlight","group/pulseaudio","network","battery"],
 
 	/* ------ Defining Modules ------ */
@@ -35,6 +35,28 @@
 		"spacing": 12,
 		"cursor": true,
 		"expand": false,
+	},
+
+	/* ------ Notfications ------ */
+	"custom/swaync": {
+	  "exec": "swaync-client --subscribe-waybar",
+	  "exec-if": "which swaync-client",
+		"return-type": "json",
+	  "format": "{icon}",
+		"min-length": 3,
+		"justify": "center",
+		"format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "tooltip": true,
+    "on-click": "swaync-client --toggle-panel --skip-wait"
 	},
 
 	/* ------ Clock ------ */

@@ -41,11 +41,10 @@ window#waybar {
   color: @green;
 }
 
-#clock.date {
-    margin-right: 10px;
-}
+#custom.swaync,
+#clock.date,
 #clock.time {
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 #battery,
