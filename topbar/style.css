@@ -41,6 +41,13 @@ window#waybar {
   color: @green;
 }
 
+#clock.date {
+    margin-right: 10px;
+}
+#clock.time {
+    margin-left: 10px;
+}
+
 #battery,
 #network,
 #pulseaudio {
