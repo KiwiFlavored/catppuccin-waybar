@@ -117,6 +117,7 @@
 
 	/* ------ Battery ------ */
 	"battery": {
+	  "interval": 20,
   	"states": {
   	  "full": 100,
   		"good": 95,
