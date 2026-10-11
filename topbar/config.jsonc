@@ -125,10 +125,6 @@
       "dead": 5
   	},
 		"format": "{icon} {capacity}%",
-		"format-charging": "{icon} {capacity}%",
-		"format-discharging": "{icon} {capacity}%",
-		"format-discharging-critical": "󱃍 {capacity}%",
-		"format-plugged": "󰚥 {capacity}%",
 		"min-length": 6,
 		"format-time": "{H}h {m}m",
 		"tooltip-format": "󱐋 {power}W\n󱈑 {health}%\n󱠴 {cycles}",
@@ -138,6 +134,8 @@
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"discharging-critical": "󱃍",
+			"plugged": "󰚥",
 		},
     "events": {
       "on-discharging-warning": "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
