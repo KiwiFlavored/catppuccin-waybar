@@ -39,7 +39,7 @@
 
 	/* ------ Brightness ------ */
 	"backlight": {
-    "format": "{icon}",
+    "format": "{icon} {percent}%",
     "min-length": 2,
     "tooltip-format": "{icon} {percent}%",
 		"format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞", "󰃟", "󰃠"],
