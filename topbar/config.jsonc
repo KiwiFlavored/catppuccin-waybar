@@ -100,6 +100,11 @@
     "format-linked": "{icon} {ifname}",
     "format-wifi": "{icon} {essid}",
     "min-length": 2,
+    "tooltip-format-disabled": "Network Disabled",
+		"tooltip-format-disconnected": "Network Disconnected",
+		"tooltip-format-ethernet": "<b>Ethernet</b> {bssid}\n 󱦂 {gwaddr}\n 󰳘 {bandwidthUpBytes}\t󰱦 {bandwidthDownBytes}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
+		"tooltip-format-linked": "<b>Interface</b> {ifname}",
+		"tooltip-format-wifi": "<b>Wi-Fi</b> {essid}\n 󱦂 {gwaddr}\t󰘚 {bssid}\n 󱄙 {signaldBm} dBm\t󰥛 {frequency} GHz\t󰒢 {signalStrength}%\n 󱚻 {bandwidthTotalBits}\t󰶡 {bandwidthDownBits}\t󰶣 {bandwidthUpBits}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
     "format-icons": {
 		  "default": "󰛳",
 			"disabled": "󰅛",
