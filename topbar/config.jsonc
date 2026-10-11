@@ -120,9 +120,9 @@
 	  "interval": 20,
   	"states": {
   	  "full": 100,
-  		"good": 95,
   		"warning": 25,
-  		"critical": 15
+  		"critical": 15,
+      "dead": 5
   	},
 		"format": "{icon} {capacity}%",
 		"format-charging": "{icon} {capacity}%",
@@ -139,9 +139,10 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 		},
     "events": {
-      "on-discharging-warning": "notify-send -u normal -i battery-low 'Battery Low' 'Battery at 25%' ",
-      "on-discharging-critical": "notify-send -u urgent -i battery-caution 'Battery Critical' 'Battery at 10%'",
-      "on-charging-full":"notify-send -u low -i battery-full 'Battery Full 'Battery at 100%'"
+      "on-discharging-warning": "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
+      "on-discharging-critical": "notify-send -u critical -i battery-level-10-symbolic 'Battery Critical' 'Battery at 15%'",
+      "on-discharging-dead": "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'",
+      "on-charging-full":"notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full 'Battery at 100%'"
     }
 	},
 
