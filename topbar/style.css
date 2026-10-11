@@ -54,11 +54,11 @@ window#waybar {
 }
 
 #network {
-  color: @yellow;
+  color: @sky;
 }
 
 #pulseaudio {
-  color: @sky;
+  color: @yellow;
 }
 
 #battery {
