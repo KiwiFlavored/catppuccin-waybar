@@ -64,8 +64,9 @@ window#waybar {
     color: @teal;
 }
 
+#battery.critical.plugged,
 #battery.warning.discharging {
-    color: @yellow;
+    color: @peach;
 }
 
 #battery.critical.discharging {
