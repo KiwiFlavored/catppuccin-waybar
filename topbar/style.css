@@ -53,12 +53,12 @@ window#waybar {
   margin-left: 20px;
 }
 
-#network {
-  color: @sky;
-}
-
 #pulseaudio {
   color: @yellow;
+}
+
+#network {
+  color: @sky;
 }
 
 #battery {
