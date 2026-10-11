@@ -165,5 +165,11 @@
 	"clock#time": {
 	  "interval": 1,
 		"format": " {0:%H:%M:%S-%Z}",
+		"timezones": [
+		  "", //Represents system's TZ
+			"UTC"
+		],
+		"tooltip-format":"{tz_list}",
+		"timezone-tooltip-format":"{0:%Z %H:%M %z}"
 	}
 }
