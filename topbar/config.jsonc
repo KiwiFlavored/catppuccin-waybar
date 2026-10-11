@@ -37,6 +37,33 @@
 		"expand": false,
 	},
 
+	/* ------ Clock ------ */
+	"clock#date": {
+	  "format": "󰃭 {0:%Y-%m-%d}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"on-scroll": 1,
+			"on-click-right": "mode",
+			"format": {
+  			"months": "<span color='#b8c0e0'><b>{}</b></span>", //Macchiato Subtext 1
+  			"weekdays": "<span color='#8aadf4'><b>{}</b></span>", //Macchiato Blue
+  			"today": "<span color='#ed8796'><b>{}</b></span>" //Macchiato Red
+			}
+		}
+	},
+	"clock#time": {
+	  "interval": 1,
+		"format": " {0:%H:%M:%S-%Z}",
+		"timezones": [
+		  "", //Represents system's TZ
+			"UTC"
+		],
+		"tooltip-format":"{tz_list}",
+		"timezone-tooltip-format":"{0:%Z %H:%M %z}"
+	},
+
 	/* ------ Brightness ------ */
 	"backlight": {
     "format": "{icon} {percent}%",
@@ -143,32 +170,5 @@
       "on-discharging-dead": "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'",
       "on-charging-full":"notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full' 'Battery at 100%'"
     }
-	},
-
-	/* ------ Clock ------ */
-	"clock#date": {
-	  "format": "󰃭 {0:%Y-%m-%d}",
-		"tooltip-format": "<tt>{calendar}</tt>",
-		"calendar": {
-			"mode": "month",
-			"mode-mon-col": 3,
-			"on-scroll": 1,
-			"on-click-right": "mode",
-			"format": {
-  			"months": "<span color='#b8c0e0'><b>{}</b></span>", //Macchiato Subtext 1
-  			"weekdays": "<span color='#8aadf4'><b>{}</b></span>", //Macchiato Blue
-  			"today": "<span color='#ed8796'><b>{}</b></span>" //Macchiato Red
-			}
-		}
-	},
-	"clock#time": {
-	  "interval": 1,
-		"format": " {0:%H:%M:%S-%Z}",
-		"timezones": [
-		  "", //Represents system's TZ
-			"UTC"
-		],
-		"tooltip-format":"{tz_list}",
-		"timezone-tooltip-format":"{0:%Z %H:%M %z}"
 	}
 }
