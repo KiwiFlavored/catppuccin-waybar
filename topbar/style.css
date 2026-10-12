@@ -3,56 +3,54 @@
 
 /* --- Mostly for fonts nothing special --- */
 * {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "JetBrainsMono Nerd Font";
 }
 
 /* --- Waybar Styles --- */
 window#waybar {
-  color: @text;
-  background: @base;
-  border-radius: 0.5rem;
-  /* border: 2px solid rgba(117, 170, 240, 0.5); */
+    color: @text;
+    background: @base;
+    border-radius: 0.5rem;
+    /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
 
 /* workspaces module styles */
 #workspaces {
-  margin: 0 10px;
+    margin: 0 10px;
 }
-
 /* For workspace button*/
 #workspaces button {
-  /* Changing the padding will effect default padding */
-  color: @lavender;
+    /* Changing the padding will effect default padding */
+    color: @lavender;
 }
-
 #workspaces button:hover {
-  background: transparent;
-  border: transparent;
-  box-shadow: none;
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
 }
-
 #workspaces button.active {
-  color: @sapphire;
+    color: @sapphire;
 }
-
 #workspaces button.urgent {
-  color: @green;
+    color: @green;
 }
 
+/* Center spacing */
 #custom.swaync,
 #clock.date,
 #clock.time {
     margin: 0 10px;
 }
 
+/* Right Spacing */
 #battery,
 #network,
 #bluetooth,
 #pulseaudio,
 #backlight {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 #idle_inhibitor {
@@ -60,7 +58,7 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: @yellow;
+    color: @yellow;
 }
 
 #bluetooth {
@@ -72,19 +70,16 @@ window#waybar {
 }
 
 #battery {
-  color: @green;
-  margin-right: 20px;
+    color: @green;
+    margin-right: 20px;
 }
-
 #battery.plugged {
     color: @teal;
 }
-
 #battery.critical.charging,
 #battery.warning.discharging {
     color: @peach;
 }
-
 #battery.critical.discharging {
     color: @red;
 }
