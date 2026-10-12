@@ -16,7 +16,7 @@
 	/* ------ Modules ------ */
   "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["custom/swaync", "clock#date", "clock#time"],
-  "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "network","battery"],
+  "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "bluetooth", "network", "battery"],
 
 	/* ------ Defining Modules ------ */
 	/* ------ Hyprland Workspaces ------ */
@@ -149,6 +149,28 @@
 			"speaker-muted": "󰓄",
 		},
 		"target": "sink"
+	},
+
+	/* ------ Bluetooth ------ */
+	"bluetooth": {
+	  "format": "{icon}",
+		"tooltip-format": "Bluetooth {status}\n<b>Controller</b> {controller_alias}\n 󰘚 {controller_address} ({controller_address_type})",
+  	"tooltip-format-connected": "<b>Controller</b> {controller_alias}\n 󰘚 {controller_address}\n<b>Connected Devices</b> ({num_connections})\n{device_enumerate}",
+    "tooltip-format-disabled": "Bluetooth disabled",
+    "tooltip-format-no-controller": "No Bluetooth controller found",
+    "tooltip-format-off": "Bluetooth off",
+    "tooltip-format-enumerate-connected": " 󰂱 {device_alias}\n   󰘚 {device_address}{icon}",
+    "tooltip-format-enumerate-connected-battery": " 󰂱 {device_alias} [{icon} {device_battery_percentage}%]\n   󰘚 {device_address}",
+		"format-icons": {
+		  "default": ["󰤾","󰤿","󰥀","󰥁","󰥂","󰥃","󰥄","󰥅","󰥆","󰥈"],
+  		"connected": "󰂱",
+ 			"disabled": "󰂲",
+      "no-controller": "󰂲!",
+		  "on": "󰂰",
+ 			"off": "󰂲",
+		},
+		"on-click": "blueman-manager",
+		//"on-click-right": "",
 	},
 
 	/* ------ Network ------ */

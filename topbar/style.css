@@ -49,6 +49,7 @@ window#waybar {
 
 #battery,
 #network,
+#bluetooth,
 #pulseaudio,
 #backlight {
   margin-left: 20px;
@@ -60,6 +61,10 @@ window#waybar {
 
 #pulseaudio {
   color: @yellow;
+}
+
+#bluetooth {
+    color: @blue;
 }
 
 #network {
