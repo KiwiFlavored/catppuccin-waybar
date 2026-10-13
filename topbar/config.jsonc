@@ -14,13 +14,24 @@
 	"margin-bottom": 0,
 
 	/* ------ Modules ------ */
-  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-left": ["hyprland/workspaces#special", "hyprland/workspaces#normal", "tray"],
   "modules-center": ["custom/swaync", "clock#date", "clock#time"],
   "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "bluetooth", "network", "battery"],
 
 	/* ------ Defining Modules ------ */
 	/* ------ Hyprland Workspaces ------ */
-  "hyprland/workspaces": {
+	"hyprland/workspaces#special": { //Shows special workspaces only
+	  "hide-empty": true,
+		"show-special": true,
+		"ignore-workspaces": ["\\d+"], //Ignore unnamed (number only) workspaces
+		"format": "{icon}",
+		"format-icons": {
+      "default": "󰘔",
+      "terminal": "󰆍"
+		}
+	},
+
+	"hyprland/workspaces#normal": { //shows normal workspaces
     "format": "{icon}",
     "format-icons": {
 			"default": "",
