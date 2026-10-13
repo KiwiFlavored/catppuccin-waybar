@@ -16,7 +16,7 @@
 	"margin-bottom": 0,
 
 	/* ------ Modules ------ */
-  "modules-left": ["group/workspaces", "tray"],
+  "modules-left": ["group/workspaces", "hyprland/window","tray"],
   "modules-center": ["custom/swaync", "group/clock"],
   "modules-right": ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
 
@@ -58,6 +58,13 @@
 		"cursor": true,
 		"expand": false,
 	},
+
+	/* ------ Window ------ */
+	"hyprland/window": {
+    "format": "{title}",
+    "icon": true,
+    "icon-size": 20
+  },
 
 	/* ------ Notfications ------ */
 	"custom/swaync": {
