@@ -31,6 +31,7 @@
 	"hyprland/workspaces#special": { //Shows special workspaces only
 	  "hide-empty": true,
 		"show-special": true,
+		"tooltip": false,
 		"ignore-workspaces": ["\\d+"], //Ignore unnamed (number only) workspaces
 		"format": "{icon}",
 		"format-icons": {
@@ -39,7 +40,8 @@
 		}
 	},
 	"hyprland/workspaces#normal": { //shows normal workspaces
-    "format": "{icon}",
+	  "tooltip": false,
+	  "format": "{icon}",
     "format-icons": {
 			"default": "",
 			"active": "",
