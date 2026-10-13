@@ -8,6 +8,14 @@
     font-family: "JetBrainsMono Nerd Font";
 }
 
+/* --- Left Modules --- */
+.modules-left {
+    margin-left: 10px;
+}
+.modules-left .module {
+    margin-right: 20px;
+}
+
 /* --- Waybar Styles --- */
 window#waybar {
     color: @text;
@@ -17,9 +25,7 @@ window#waybar {
 }
 
 /* workspaces module styles */
-#workspaces {
-    margin: 0 10px;
-}
+
 /* For workspace button*/
 #workspaces button {
     /* Changing the padding will effect default padding */
@@ -54,20 +60,17 @@ window#waybar {
     color: @red;
 }
 
-/* Center spacing */
-#custom.swaync,
-#clock.date,
-#clock.time {
+/* --- Center Modules --- */
+.modules-center .module {
     margin: 0 10px;
 }
 
-/* Right Spacing */
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#backlight {
-    margin-left: 20px;
+/* --- Right Modules --- */
+.modules-right {
+    margin-right: 20px;
+}
+.modules-right .module {
+  margin-left: 20px;
 }
 
 #idle_inhibitor {
@@ -88,7 +91,6 @@ window#waybar {
 
 #battery {
     color: @green;
-    margin-right: 20px;
 }
 #battery.plugged {
     color: @teal;
