@@ -24,8 +24,10 @@ window#waybar {
     /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
 
-/* workspaces module styles */
-
+/* Workspaces Modules */
+#workspaces.special {
+    margin-right: 5px;
+}
 /* For workspace button*/
 #workspaces button {
     /* Changing the padding will effect default padding */
