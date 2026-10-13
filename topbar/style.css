@@ -30,11 +30,28 @@ window#waybar {
     border: transparent;
     box-shadow: none;
 }
-#workspaces button.active {
+#workspaces.special button.active {
     color: @sapphire;
 }
-#workspaces button.urgent {
+/* Named workspace classes do not work on latest Waybar release (0.15.0),
+   currently only available on `master` branch */
+#workspaces.normal button.ws-1,
+#workspaces.normal button.ws-5,
+#workspaces.normal button.ws-9 {
+    color: @blue;
+}
+#workspaces.normal button.ws-2,
+#workspaces.normal button.ws-6,
+#workspaces.normal button.ws-10 {
     color: @green;
+}
+#workspaces.normal button.ws-3,
+#workspaces.normal button.ws-7 {
+    color: @yellow;
+}
+#workspaces.normal button.ws-4,
+#workspaces.normal button.ws-8 {
+    color: @red;
 }
 
 /* Center spacing */
