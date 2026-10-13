@@ -17,7 +17,7 @@
 
 	/* ------ Modules ------ */
   "modules-left": ["group/workspaces", "tray"],
-  "modules-center": ["custom/swaync", "clock#date", "clock#time"],
+  "modules-center": ["custom/swaync", "group/clock"],
   "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "bluetooth", "network", "battery"],
 
 	/* ------ Defining Modules ------ */
@@ -82,6 +82,13 @@
 	},
 
 	/* ------ Clock ------ */
+	"group/clock" : {
+	  "modules": [
+			"clock#date",
+			"clock#time"
+		],
+		"orientation": "horizontal"
+	},
 	"clock#date": {
 	  "format": "󰃭 {0:%Y-%m-%d}",
 		"tooltip-format": "<tt>{calendar}</tt>",
