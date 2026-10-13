@@ -1,4 +1,6 @@
 {
+  "reload-style-on-change": true,
+  
 	/* ------ Size ------ */
 	"height": 42,
   "width": "100%",
