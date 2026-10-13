@@ -1,6 +1,6 @@
 {
   "reload-style-on-change": true,
-  
+
 	/* ------ Size ------ */
 	"height": 42,
   "width": "100%",
@@ -20,7 +20,6 @@
   "modules-center": ["custom/swaync", "group/clock"],
   "modules-right": ["idle_inhibitor", "backlight", "group/pulseaudio", "bluetooth", "network", "battery"],
 
-	/* ------ Defining Modules ------ */
 	/* ------ Workspaces ------ */
 	"group/workspaces" : {
 	  "modules": [
@@ -39,7 +38,6 @@
       "terminal": "󰆍"
 		}
 	},
-
 	"hyprland/workspaces#normal": { //shows normal workspaces
     "format": "{icon}",
     "format-icons": {
