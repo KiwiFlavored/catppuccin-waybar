@@ -27,6 +27,7 @@
 			"active": "",
 			"urgent": "󰗖"
     },
+    "on-click": "activate",
     "disable-scroll": true
   },
 
