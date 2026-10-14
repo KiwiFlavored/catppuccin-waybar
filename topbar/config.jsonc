@@ -268,10 +268,10 @@
       "dead": 5
   	},
     "events": {
-      "on-charging-full":        "notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full' 'Battery at 100%'",
-      "on-discharging-warning":  "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
-      "on-discharging-critical": "notify-send -u critical -i battery-level-10-symbolic 'Battery Critical' 'Battery at 15%'",
-      "on-discharging-dead":     "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'"
+      "on-plugged-full":          "notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full' 'Battery at 100%'",
+      "on-discharging-warning":   "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
+      "on-discharging-critical":  "notify-send -u critical -i battery-level-10-symbolic 'Battery Critical' 'Battery at 15%'",
+      "on-discharging-dead":      "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'"
     },
 		"format": "{icon} {capacity}%",
 		"min-length": 6,
