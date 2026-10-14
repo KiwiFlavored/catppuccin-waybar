@@ -275,15 +275,17 @@
     },
 		"format": "{icon} {capacity}%",
 		"min-length": 6,
-		"tooltip-format":             "󱐋 {power}W\n󱈑 {health}%\n󱠴 {cycles}",
-		"tooltip-format-charging":    "󱐋 {power}W\n󱧥 {time}\n󱈑 {health}%\n󱠴 {cycles}",
-		"tooltip-format-discharging": "󱐋 {power}W\n󱧦 {time}\n󱈑 {health}%\n󱠴 {cycles}",
-		"tooltip-format-plugged":     "󱐋 {power}W\n󱟢 {capacity}%\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format":               "󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-charging":      "Charging\n󱐋 {power}W\n󱧥 {time}\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-discharging":   "Discharging\n󱐋 {power}W\n󱧦 {time}\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-not-charging":  "Not Charging\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-plugged":       "Plugged\n󱐋 {power}W\n󱈑 {health}%\n󱠴 {cycles}",
 		"format-time": "{H}h {m}m",
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"discharging-critical": "󱃍",
+			"not-charging": "󱐥",
 			"plugged": "󰚥"
 		}
 	}

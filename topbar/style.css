@@ -106,6 +106,9 @@ window#waybar {
 }
 /* Selector format is `#battery.<status>.<state>` */
 #battery.plugged {
+    color: @blue;
+}
+#battery.not-charging {
     color: @teal;
 }
 #battery.charging.warning {
