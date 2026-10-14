@@ -1,6 +1,6 @@
 # catppuccin-waybar
 
-Simple, Minimal and Elegant Waybar config for Catppuccin theme.
+Kiwi's Catppuccin Macchiato themed Waybar config
 
 ## Preview
 #### OLDBAR
@@ -11,7 +11,7 @@ Simple, Minimal and Elegant Waybar config for Catppuccin theme.
 ## Features
 
 - Easy to install 🚀
-- Catppuccino theme 🎨
+- Catppuccin Macchiato theme 🎨
 - Easily customizable ⚙️
 
 ## Installation
@@ -19,13 +19,13 @@ Simple, Minimal and Elegant Waybar config for Catppuccin theme.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Srinath10X/catppuccin-waybar.git
+git clone https://github.com/KiwiFlavored/catppuccin-waybar.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd catppuccin-waybar/waybar
+cd catppuccin-waybar
 ```
 
 3. Copy the config to your .config folder
@@ -48,4 +48,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under [GPLv3](LICENSE).
