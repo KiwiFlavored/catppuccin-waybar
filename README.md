@@ -3,10 +3,7 @@
 Kiwi's Catppuccin Macchiato themed Waybar config
 
 ## Preview
-#### OLDBAR
-![waybar](./assets/bar1.png)
-#### NEWBAR
-![waybar2](./assets/bar2.png)
+Coming soon
 
 ## Features
 
