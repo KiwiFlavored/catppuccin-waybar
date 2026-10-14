@@ -108,10 +108,10 @@ window#waybar {
 #battery.plugged {
     color: @teal;
 }
-#battery.critical.charging,
-#battery.warning.discharging {
+#battery.charging.critical,
+#battery.discharging.warning {
     color: @peach;
 }
-#battery.critical.discharging {
+#battery.discharging.critical {
     color: @red;
 }
