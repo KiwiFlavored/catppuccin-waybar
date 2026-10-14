@@ -8,14 +8,6 @@
     font-family: "JetBrainsMono Nerd Font";
 }
 
-/* --- Left Modules --- */
-.modules-left {
-    margin-left: 10px;
-}
-.modules-left .module {
-    margin-right: 20px;
-}
-
 /* --- Waybar Styles --- */
 window#waybar {
     color: @text;
@@ -27,7 +19,15 @@ window#waybar {
     /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
 
-/* Workspaces Modules */
+/* --- Left Modules --- */
+.modules-left {
+    margin-left: 10px;
+}
+.modules-left .module {
+    margin-right: 20px;
+}
+
+/* -- Workspaces Modules -- */
 #workspaces.special {
     margin-right: 5px;
 }
@@ -36,7 +36,7 @@ window#waybar {
     /* Changing the padding will effect default padding */
     color: @lavender;
 }
-#workspaces button:hover {
+#workspaces button:hover { /* Prevents the button hover effect */
     background: transparent;
     border: transparent;
     box-shadow: none;
@@ -45,7 +45,7 @@ window#waybar {
     color: @sapphire;
 }
 /* Named workspace classes do not work on latest Waybar release (0.15.0),
-   currently only available on `master` branch */
+   currently only available on `master` branch and planned for 0.16.0 */
 #workspaces.normal button.ws-1,
 #workspaces.normal button.ws-5,
 #workspaces.normal button.ws-9 {
@@ -94,6 +94,7 @@ window#waybar {
   color: @sky;
 }
 
+/* -- Battery Module -- */
 #battery {
     color: @green;
 }
