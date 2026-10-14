@@ -1,4 +1,4 @@
-/* --- Catppuccin Macchiato Colors --- */
+/* Catppuccin Macchiato Colors */
 @import "catppuccin-macchiato.css";
 
 /* --- Mostly for fonts nothing special --- */
@@ -8,7 +8,7 @@
     font-family: "JetBrainsMono Nerd Font";
 }
 
-/* --- Waybar Styles --- */
+/* ----- Waybar ----- */
 window#waybar {
     color: @text;
     background: @base;
@@ -19,6 +19,8 @@ window#waybar {
     /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
 
+/* ----- Modules ----- */
+
 /* --- Left Modules --- */
 .modules-left {
     margin-left: 10px;
@@ -27,7 +29,7 @@ window#waybar {
     margin-right: 20px;
 }
 
-/* -- Workspaces Modules -- */
+/* - Workspaces Modules - */
 #workspaces.special {
     margin-right: 5px;
 }
@@ -78,26 +80,31 @@ window#waybar {
   margin-left: 20px;
 }
 
+/* - Idle Inhibitor - */
 #idle_inhibitor {
     color: @flamingo;
 }
 
+/* - Volume - */
 #pulseaudio {
     color: @yellow;
 }
 
+/* - Bluetooth - */
 #bluetooth {
     color: @blue;
 }
 
+/* - Network - */
 #network {
   color: @sky;
 }
 
-/* -- Battery Module -- */
+/* - Battery - */
 #battery {
     color: @green;
 }
+/* Selector format is `#battery.<status>.<state>` */
 #battery.plugged {
     color: @teal;
 }

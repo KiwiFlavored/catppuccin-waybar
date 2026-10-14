@@ -1,26 +1,39 @@
 {
+  /* INFO
+    - Icons
+      - All icons used are Nerd Font Material Design icons (nf-md-*)
+  */
+
+  /* ===== General ===== */
   "reload-style-on-change": true,
 
-	/* ------ Size ------ */
+	/* --- Size --- */
 	"height": 42,
   "width": "100%",
 
-	/* ------ Position ------ */
+	/* --- Position --- */
   "layer": "top",
   "position": "top",
 
-	/* ------ Margin ------ */
-  "margin-right": 5,
-  "margin-left": 5,
-	"margin-top": 5,
-	"margin-bottom": 0,
+	/* --- Margin --- */
+  "margin-right":   5,
+  "margin-left":    5,
+	"margin-top":     5,
+	"margin-bottom":  0,
 
-	/* ------ Modules ------ */
-  "modules-left": ["group/workspaces", "hyprland/window","tray"],
+
+	/* ===== Modules ===== */
+
+	/* ----- Layout ----- */
+  "modules-left":   ["group/workspaces", "hyprland/window", "tray"],
   "modules-center": ["custom/swaync", "group/clock"],
-  "modules-right": ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
+  "modules-right":  ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
 
-	/* ------ Workspaces ------ */
+
+  /* ----- Left Modules ----- */
+
+	/* --- Workspaces --- */
+	/* - Group - */
 	"group/workspaces" : {
 	  "modules": [
 			"hyprland/workspaces#special",
@@ -28,30 +41,39 @@
 			],
 		"orientation": "horizontal",
 	},
-	"hyprland/workspaces#special": { //Shows special workspaces only
+	/* - Special - */
+	"hyprland/workspaces#special": { // Shows special workspaces only
 	  "hide-empty": true,
 		"show-special": true,
+		"ignore-workspaces": ["\\d+"], // Ignore unnamed (number only) workspaces
 		"tooltip": false,
-		"ignore-workspaces": ["\\d+"], //Ignore unnamed (number only) workspaces
 		"format": "{icon}",
 		"format-icons": {
-      "default": "󰘔",
+      "default":  "󰘔",
       "terminal": "󰆍"
 		}
 	},
-	"hyprland/workspaces#normal": { //shows normal workspaces
+	/* - Normal - */
+	"hyprland/workspaces#normal": { // Shows normal workspaces
+	  "disable-scroll": true,
+	  "on-click": "activate",
 	  "tooltip": false,
 	  "format": "{icon}",
     "format-icons": {
-			"default": "",
-			"active": "",
-			"urgent": "󰗖"
+			"default":  "",
+			"active":   "",
+			"urgent":   "󰗖"
     },
-    "on-click": "activate",
-    "disable-scroll": true
   },
 
-  /* ------ Tray ------ */
+  /* --- Window --- */
+	"hyprland/window": {
+     "format": "{title}",
+     "icon": true,
+     "icon-size": 20
+   },
+
+  /* --- Tray --- */
 	"tray": {
 		"icon-size": 16,
 		"spacing": 12,
@@ -59,36 +81,32 @@
 		"expand": false,
 	},
 
-	/* ------ Window ------ */
-	"hyprland/window": {
-    "format": "{title}",
-    "icon": true,
-    "icon-size": 20
-  },
+	/* ----- Center Modules ----- */
 
-	/* ------ Notfications ------ */
+	/* --- Notfications --- */
 	"custom/swaync": {
-	  "exec": "swaync-client --subscribe-waybar",
 	  "exec-if": "which swaync-client",
+	  "exec": "swaync-client --subscribe-waybar",
 		"return-type": "json",
+		"on-click": "swaync-client --toggle-panel --skip-wait",
 	  "format": "{icon}",
 		"min-length": 3,
 		"justify": "center",
 		"format-icons": {
-      "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
-      "inhibited-notification": "󰂛",
-      "inhibited-none": "󰪑",
+      "notification":               "󱅫",
+      "none":                       "󰂜",
+      "dnd-notification":           "󰂠",
+      "dnd-none":                   "󰪓",
+      "inhibited-notification":     "󰂛",
+      "inhibited-none":             "󰪑",
       "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
+      "dnd-inhibited-none":         "󰪑"
     },
-    "tooltip": true,
-    "on-click": "swaync-client --toggle-panel --skip-wait"
+    "tooltip": true
 	},
 
-	/* ------ Clock ------ */
+	/* --- Clock --- */
+	/* - Group - */
 	"group/clock" : {
 	  "modules": [
 			"clock#date",
@@ -96,6 +114,7 @@
 		],
 		"orientation": "horizontal"
 	},
+	/* - Date - */
 	"clock#date": {
 	  "format": "󰃭 {0:%Y-%m-%d}",
 		"tooltip-format": "<tt>{calendar}</tt>",
@@ -105,46 +124,50 @@
 			"on-scroll": 1,
 			"on-click-right": "mode",
 			"format": {
-  			"months": "<span color='#b8c0e0'><b>{}</b></span>", //Macchiato Subtext 1
-  			"weekdays": "<span color='#8aadf4'><b>{}</b></span>", //Macchiato Blue
-  			"today": "<span color='#ed8796'><b>{}</b></span>" //Macchiato Red
+  			"months":   "<span color='#b8c0e0'><b>{}</b></span>", // Macchiato Subtext 1
+  			"weekdays": "<span color='#8aadf4'><b>{}</b></span>", // Macchiato Blue
+  			"today":    "<span color='#ed8796'><b>{}</b></span>"  // Macchiato Red
 			}
 		}
 	},
+	/* - Time - */
 	"clock#time": {
 	  "interval": 1,
-		"format": " {0:%H:%M:%S-%Z}",
 		"timezones": [
-		  "", //Represents system's TZ
+		  "",   // Represents system's TZ
 			"UTC"
 		],
-		"tooltip-format":"{tz_list}",
-		"timezone-tooltip-format":"{0:%Z %H:%M %z}"
+		"format": " {0:%H:%M:%S-%Z}",
+		"tooltip-format": "{tz_list}",
+		"timezone-tooltip-format": "{0:%Z %H:%M %z}"
 	},
 
-	/* ------ Idle Inhibitor ------ */
+	/* ----- Right Modules ----- */
+
+	/* --- Idle Inhibitor --- */
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"min-length": 2,
+		"tooltip-format-activated":   "<b>Idle Inhibitor</b>: Activated",
+		"tooltip-format-deactivated": "<b>Idle Inhibitor</b>: Deactivated",
 		"format-icons": {
-			"activated": "󰅶",
-			"deactivated": "󰛊"
-		},
-		"tooltip-format-activated": "<b>Idle Inhibitor</b>: Activated",
-		"tooltip-format-deactivated": "<b>Idle Inhibitor</b>: Deactivated"
+			"activated":    "󰅶",
+			"deactivated":  "󰛊"
+		}
 	},
 
-	/* ------ Brightness ------ */
+	/* --- Brightness --- */
 	"backlight": {
+    "on-scroll-up":   "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
     "format": "{icon} {percent}%",
     "min-length": 2,
     "tooltip-format": "{icon} {percent}%",
-		"format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞", "󰃟", "󰃠"],
-		"on-scroll-up": "brightnessctl set 1%+",
-		"on-scroll-down": "brightnessctl set 1%-"
+		"format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
 	},
 
-	/* ------ Volume ------ */
+	/* --- Volume --- */
+	/* - Group - */
 	"group/volume": {
 	  "modules": [
 			"pulseaudio#output",
@@ -155,86 +178,87 @@
 			"transition-left-to-right": false
 		}
 	},
+	/* - Input - */
 	"pulseaudio#input": {
+	  "target": "source",
+	  "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
 	  "format": "{format_source}",
-    "format-source": "󰍬 {volume}%",
-    "format-source-muted": "󰍭 {volume}%",
-    "tooltip-format": "{source_desc}",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    "target": "source"
+    "format-source":        "󰍬 {volume}%",
+    "format-source-muted":  "󰍭 {volume}%",
+    "tooltip-format": "{source_desc}"
 	},
+	/* - Output - */
 	"pulseaudio#output": {
-		"format": "{icon} {volume}%",
+	  "target": "sink",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"format":       "{icon} {volume}%",
 		"format-muted": "{icon} {volume}%",
 		"tooltip-format": "{desc}",
-		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"format-icons": {
 		  "default": ["󰕿", "󰖀", "󰕾"],
-			"default-muted": "󰝟",
-			"car": "󰄋",
-			"car-muted": "󰸜",
-			"hdmi": "󰐯",
-			"hdmi-muted": "󱠍",
-			"headphone": "󰋋",
-			"headphone-muted": "󰟎",
-			"headset": "󰋎",
-			"headset-muted": "󰋐",
-			"phone": "󰄜",
-			"phone-muted": "󰥐",
-			"speaker": "󰓃",
-			"speaker-muted": "󰓄",
-		},
-		"target": "sink"
-	},
-
-	/* ------ Bluetooth ------ */
-	"bluetooth": {
-	  "format": "{icon}",
-		"tooltip-format": "Bluetooth {status}\n<b>Controller</b> {controller_alias}\n 󰘚 {controller_address} ({controller_address_type})",
-  	"tooltip-format-connected": "<b>Controller</b> {controller_alias}\n 󰘚 {controller_address}\n<b>Connected Devices</b> ({num_connections})\n{device_enumerate}",
-    "tooltip-format-disabled": "Bluetooth disabled",
-    "tooltip-format-no-controller": "No Bluetooth controller found",
-    "tooltip-format-off": "Bluetooth off",
-    "tooltip-format-enumerate-connected": " 󰂱 {device_alias}\n   󰘚 {device_address}{icon}",
-    "tooltip-format-enumerate-connected-battery": " 󰂱 {device_alias} [{icon} {device_battery_percentage}%]\n   󰘚 {device_address}",
-		"format-icons": {
-		  "default": ["󰤾","󰤿","󰥀","󰥁","󰥂","󰥃","󰥄","󰥅","󰥆","󰥈"],
-  		"connected": "󰂱",
- 			"disabled": "󰂲",
-      "no-controller": "󰂲!",
-		  "on": "󰂰",
- 			"off": "󰂲",
-		},
-		"on-click": "blueman-manager",
-		//"on-click-right": "",
-	},
-
-	/* ------ Network ------ */
-	"network": {
-  	"format": "{icon} {essid}",
-    "format-alt": "{icon} 󰳘 {bandwidthUpBytes} 󰱦 {bandwidthDownBytes}",
-    "format-disabled": "{icon}",
-    "format-disconnected": "{icon}",
-    "format-ethernet": "{icon} {ifname}",
-    "format-linked": "{icon} {ifname}",
-    "format-wifi": "{icon} {essid}",
-    "min-length": 2,
-    "tooltip-format-disabled": "Network Disabled",
-		"tooltip-format-disconnected": "Network Disconnected",
-		"tooltip-format-ethernet": "<b>Ethernet</b> {bssid}\n 󱦂 {gwaddr}\n 󰳘 {bandwidthUpBytes}\t󰱦 {bandwidthDownBytes}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
-		"tooltip-format-linked": "<b>Interface</b> {ifname}",
-		"tooltip-format-wifi": "<b>Wi-Fi</b> {essid}\n 󱦂 {gwaddr}\t󰘚 {bssid}\n 󱄙 {signaldBm} dBm\t󰥛 {frequency} GHz\t󰒢 {signalStrength}%\n 󱚻 {bandwidthTotalBits}\t󰶡 {bandwidthDownBits}\t󰶣 {bandwidthUpBits}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
-    "format-icons": {
-		  "default": "󰛳",
-			"disabled": "󰅛",
-			"disconnected": "󰲛",
-			"ethernet": "󰈀",
-			"linked": "󰌷",
-			"wifi": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+			"default-muted":    "󰝟",
+			"car":              "󰄋",
+			"car-muted":        "󰸜",
+			"hdmi":             "󰐯",
+			"hdmi-muted":       "󱠍",
+			"headphone":        "󰋋",
+			"headphone-muted":  "󰟎",
+			"headset":          "󰋎",
+			"headset-muted":    "󰋐",
+			"phone":            "󰄜",
+			"phone-muted":      "󰥐",
+			"speaker":          "󰓃",
+			"speaker-muted":    "󰓄",
 		}
 	},
 
-	/* ------ Battery ------ */
+	/* --- Bluetooth --- */
+	"bluetooth": {
+	  "on-click": "blueman-manager",
+	  "format": "{icon}",
+		"tooltip-format":               "Bluetooth {status}\n<b>Controller</b> {controller_alias}\n 󰘚 {controller_address} ({controller_address_type})",
+  	"tooltip-format-connected":     "<b>Controller</b> {controller_alias}\n 󰘚 {controller_address}\n<b>Connected Devices</b> ({num_connections})\n{device_enumerate}",
+    "tooltip-format-disabled":      "Bluetooth disabled",
+    "tooltip-format-no-controller": "No Bluetooth controller found",
+    "tooltip-format-off":           "Bluetooth off",
+    "tooltip-format-enumerate-connected":         " 󰂱 {device_alias}\n   󰘚 {device_address}{icon}",
+    "tooltip-format-enumerate-connected-battery": " 󰂱 {device_alias} [{icon} {device_battery_percentage}%]\n   󰘚 {device_address}",
+		"format-icons": {
+		  "default": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
+  		"connected":      "󰂱",
+ 			"disabled":       "󰂲",
+      "no-controller":  "󰂲!",
+		  "on":             "󰂰",
+ 			"off":            "󰂲",
+		}
+	},
+
+	/* --- Network --- */
+	"network": {
+  	"format":               "{icon} {essid}",
+    "format-alt":           "{icon} 󰳘 {bandwidthUpBytes} 󰱦 {bandwidthDownBytes}",
+    "format-disabled":      "{icon}",
+    "format-disconnected":  "{icon}",
+    "format-ethernet":      "{icon} {ifname}",
+    "format-linked":        "{icon} {ifname}",
+    "format-wifi":          "{icon} {essid}",
+    "min-length": 2,
+    "tooltip-format-disabled":      "Network Disabled",
+		"tooltip-format-disconnected":  "Network Disconnected",
+		"tooltip-format-ethernet":      "<b>Ethernet</b> {bssid}\n 󱦂 {gwaddr}\n 󰳘 {bandwidthUpBytes}\t󰱦 {bandwidthDownBytes}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
+		"tooltip-format-linked":        "<b>Interface</b> {ifname}",
+		"tooltip-format-wifi":          "<b>Wi-Fi</b> {essid}\n 󱦂 {gwaddr}\t󰘚 {bssid}\n 󱄙 {signaldBm} dBm\t󰥛 {frequency} GHz\t󰒢 {signalStrength}%\n 󱚻 {bandwidthTotalBits}\t󰶡 {bandwidthDownBits}\t󰶣 {bandwidthUpBits}\n<b>Interface</b> {ifname}\n 󰲐 {ipaddr}\t󱡔 {netmask}",
+    "format-icons": {
+		  "default":      "󰛳",
+			"disabled":     "󰅛",
+			"disconnected": "󰲛",
+			"ethernet":     "󰈀",
+			"linked":       "󰌷",
+			"wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		}
+	},
+
+	/* --- Battery --- */
 	"battery": {
 	  "interval": 20,
   	"states": {
@@ -243,24 +267,25 @@
   		"critical": 15,
       "dead": 5
   	},
+    "events": {
+      "on-charging-full":        "notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full' 'Battery at 100%'",
+      "on-discharging-warning":  "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
+      "on-discharging-critical": "notify-send -u critical -i battery-level-10-symbolic 'Battery Critical' 'Battery at 15%'",
+      "on-discharging-dead":     "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'"
+    },
 		"format": "{icon} {capacity}%",
 		"min-length": 6,
-		"format-time": "{H}h {m}m",
-		"tooltip-format": "󱐋 {power}W\n󱈑 {health}%\n󱠴 {cycles}",
-		"tooltip-format-charging": "󱐋 {power}W\n󱧥 {time}\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format":             "󱐋 {power}W\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-charging":    "󱐋 {power}W\n󱧥 {time}\n󱈑 {health}%\n󱠴 {cycles}",
 		"tooltip-format-discharging": "󱐋 {power}W\n󱧦 {time}\n󱈑 {health}%\n󱠴 {cycles}",
-		"tooltip-format-plugged": "󱐋 {power}W\n󱟢 {capacity}%\n󱈑 {health}%\n󱠴 {cycles}",
+		"tooltip-format-plugged":     "󱐋 {power}W\n󱟢 {capacity}%\n󱈑 {health}%\n󱠴 {cycles}",
+		"format-time": "{H}h {m}m",
 		"format-icons": {
 		  "default":  ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"discharging-critical": "󱃍",
-			"plugged": "󰚥",
-		},
-    "events": {
-      "on-discharging-warning": "notify-send -u normal -i battery-level-20-symbolic 'Battery Low' 'Battery at 25%' ",
-      "on-discharging-critical": "notify-send -u critical -i battery-level-10-symbolic 'Battery Critical' 'Battery at 15%'",
-      "on-discharging-dead": "notify-send -u critical -i battery-level-0-symbolic 'Battery Empty' 'Battery at 5%'",
-      "on-charging-full":"notify-send -u low -i battery-level-100-plugged-in-symbolic 'Battery Full' 'Battery at 100%'"
-    }
+			"plugged": "󰚥"
+		}
 	}
+
 }
