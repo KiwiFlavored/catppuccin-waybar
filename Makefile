@@ -1,7 +1,7 @@
 CONFIG_DIR := $(HOME)/.config
 WAYBAR_DIR := $(CONFIG_DIR)/waybar
 WAYBAR_BACKUP := $(CONFIG_DIR)/waybar.backup
-PROJECT_WAYBAR := $(CURDIR)/topbar
+PROJECT_WAYBAR := $(CURDIR)/waybar
 
 install:
 ifeq ($(wildcard $(WAYBAR_DIR)), $(WAYBAR_DIR))
