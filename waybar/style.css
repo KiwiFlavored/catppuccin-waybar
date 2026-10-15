@@ -13,9 +13,6 @@ window#waybar {
     color: @text;
     background: @base;
     border-radius: 0.5rem;
-    opacity: 0.9999;  /* Fixes black corners caused by rounded corners
-                      https://github.com/Alexays/Waybar/issues/3882
-                      https://github.com/niri-wm/niri/issues/1872 */
     /* border: 2px solid rgba(117, 170, 240, 0.5); */
 }
 
