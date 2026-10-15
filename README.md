@@ -1,15 +1,16 @@
 # catppuccin-waybar
 
-Kiwi's Catppuccin Macchiato themed Waybar config
+Kiwi's [Catppuccin](https://catppuccin.com) [Macchiato](https://catppuccin.com/palette) themed [Waybar](https://github.com/Alexays/Waybar) configuration
+
+*A fork of [Srinath10X/catppuccin-waybar](https://github.com/Srinath10X/catppuccin-waybar).*
 
 ## Preview
 Coming soon
 
 ## Features
-
-- Easy to install 🚀
-- Catppuccin Macchiato theme 🎨
-- Easily customizable ⚙️
+- Easy install with `make`
+  - Backs up your existing Waybar config
+- **Catppuccin Macchiato** theme
 
 ## Installation
 
@@ -19,25 +20,25 @@ Coming soon
 git clone https://github.com/KiwiFlavored/catppuccin-waybar.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate into the project directory:
 
 ```bash
 cd catppuccin-waybar
 ```
 
-3. Copy the config to your .config folder
+3. Add [`waybar/`](waybar) to your config directory:
 
-```bash
-make install
-```
+  - **Using `make`:**
 
-## Usage
+    (This will also back up your previous config to `~/.config/waybar.backup/`)
+  
+    ```bash
+    make install
+    ```
 
-1. Run Waybar:
+  - **Manually:**
 
-```bash
-waybar
-```
+    Replace your Waybar config directory (`~/.config/waybar/`) with `waybar/` and its contents.
 
 ## Contributing
 
