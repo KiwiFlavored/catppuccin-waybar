@@ -105,7 +105,22 @@ window#waybar {
 
 /* - Network - */
 #network {
-  color: @sky;
+  color: @text;
+}
+#network.disabled {
+    color: @overlay0;
+}
+#network.disconnected {
+    color: @red;
+}
+#network.ethernet {
+    color: @green;
+}
+#network.linked {
+    color: @mauve;
+}
+#network.wifi {
+   color: @blue;
 }
 
 /* - Battery - */
