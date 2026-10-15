@@ -16,15 +16,15 @@ Coming soon
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/KiwiFlavored/catppuccin-waybar.git
-```
+  ```bash
+  git clone https://github.com/KiwiFlavored/catppuccin-waybar.git
+  ```
 
 2. Navigate into the project directory:
 
-```bash
-cd catppuccin-waybar
-```
+  ```bash
+  cd catppuccin-waybar
+  ```
 
 3. Add [`waybar/`](waybar) to your config directory:
 
