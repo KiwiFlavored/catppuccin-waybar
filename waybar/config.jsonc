@@ -43,6 +43,7 @@
 	},
 	/* - Special - */
 	"hyprland/workspaces#special": { // Shows special workspaces only
+		"all-outputs": true,
 	  "hide-empty": true,
 		"show-special": true,
 		"ignore-workspaces": ["\\d+"], // Ignore unnamed (number only) workspaces
@@ -55,19 +56,23 @@
 	},
 	/* - Normal - */
 	"hyprland/workspaces#normal": { // Shows normal workspaces
+	  "move-to-monitor": true,
 	  "disable-scroll": true,
 	  "on-click": "activate",
+		"all-outputs": true,
 	  "tooltip": false,
 	  "format": "{icon}",
     "format-icons": {
 			"default":  "",
 			"active":   "",
-			"urgent":   "󰗖"
+			"urgent":   "󰗖",
+			"visible":  "󰻃"
     },
   },
 
   /* --- Window --- */
 	"hyprland/window": {
+	   "separate-outputs": true,
      "format": "{title}",
      "icon": true,
      "icon-size": 20
