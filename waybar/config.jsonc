@@ -1,32 +1,74 @@
-{
+[
+  {
+    "name": "main",
 
-  /* ===== General ===== */
-  "reload-style-on-change": true,
+    /* ===== General ===== */
 
-	/* --- Size --- */
-	"height": 42,
-  "width": "100%",
+    "output": "eDP-1",
 
-	/* --- Position --- */
-  "layer": "top",
-  "position": "top",
+    "reload-style-on-change": true,
 
-	/* --- Margin --- */
-  "margin-right":   5,
-  "margin-left":    5,
-	"margin-top":     5,
-	"margin-bottom":  0,
+  	/* --- Size --- */
+  	"height": 42,
+    "width": "100%",
+
+  	/* --- Position --- */
+    "layer": "top",
+    "position": "top",
+
+  	/* --- Margin --- */
+    "margin-right":   5,
+    "margin-left":    5,
+  	"margin-top":     5,
+  	"margin-bottom":  0,
 
 
-	/* ===== Modules ===== */
+  	/* ===== Modules ===== */
 
-	"include": [
-	  "modules.jsonc"
-	],
+  	"include": [
+  	  "modules.jsonc"
+  	],
 
-	/* ----- Layout ----- */
-  "modules-left":   ["group/workspaces", "hyprland/window", "tray"],
-  "modules-center": ["custom/swaync", "group/clock"],
-  "modules-right":  ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
+  	/* ----- Layout ----- */
+    "modules-left":   ["group/workspaces", "hyprland/window", "tray"],
+    "modules-center": ["custom/swaync", "group/clock"],
+    "modules-right":  ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
 
-}
+  },
+  {
+    "name": "other",
+
+    /* ===== General ===== */
+
+    "output": "!eDP-1",
+
+    "reload-style-on-change": true,
+
+  	/* --- Size --- */
+  	"height": 42,
+    "width": "100%",
+
+  	/* --- Position --- */
+    "layer": "top",
+    "position": "top",
+
+  	/* --- Margin --- */
+    "margin-right":   5,
+    "margin-left":    5,
+  	"margin-top":     5,
+  	"margin-bottom":  0,
+
+
+  	/* ===== Modules ===== */
+
+  	"include": [
+  	  "modules.jsonc"
+  	],
+
+  	/* ----- Layout ----- */
+    "modules-left":   ["group/workspaces", "hyprland/window", "tray"],
+    "modules-center": ["custom/swaync", "group/clock"],
+    "modules-right":  ["idle_inhibitor", "backlight", "group/volume", "bluetooth", "network", "battery"],
+
+  }
+]
