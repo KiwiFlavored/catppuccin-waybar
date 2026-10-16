@@ -1,8 +1,4 @@
 {
-  /* INFO
-    - Icons
-      - All icons used are Nerd Font Material Design icons (nf-md-*)
-  */
 
   /* ===== General ===== */
   "reload-style-on-change": true,
