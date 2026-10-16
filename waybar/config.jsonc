@@ -1,6 +1,6 @@
 [
   {
-    "name": "main",
+    "name": "waybar-main",
 
     /* ===== General ===== */
 
@@ -36,7 +36,7 @@
 
   },
   {
-    "name": "other",
+    "name": "waybar-other",
 
     /* ===== General ===== */
 
