@@ -1,6 +1,6 @@
 # catppuccin-waybar
 
-Kiwi's [Catppuccin](https://catppuccin.com) [Macchiato](https://catppuccin.com/palette) themed [Waybar](https://github.com/Alexays/Waybar) configuration
+Kiwi's [Catppuccin](https://catppuccin.com) themed [Waybar](https://github.com/Alexays/Waybar) configuration
 
 *A fork of [Srinath10X/catppuccin-waybar](https://github.com/Srinath10X/catppuccin-waybar).*
 
