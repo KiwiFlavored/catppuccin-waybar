@@ -47,8 +47,6 @@ tooltip label {
 #workspaces.special button.hosting-monitor.active {
     color: @rosewater
 }
-/* Named workspace classes do not work on latest Waybar release (0.15.0),
-   currently only available on `master` branch and planned for 0.16.0 */
 #workspaces.normal button.ws-1 {
     color: @mauve;
 }
